@@ -1,6 +1,0 @@
-flake.lock
-.envrc
-*.sh
-*.jar
-*.json
-*.toml
