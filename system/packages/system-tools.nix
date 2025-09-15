@@ -19,7 +19,6 @@
     ocamlPackages.gstreamer
     gst_all_1.gst-plugins-good
     gst_all_1.gst-plugins-bad
-    greenwithenvy
 
     # Hardware Support
     linuxKernel.packages.linux_zen.xpadneo
