@@ -79,6 +79,10 @@
   # Bluetooth fix
   boot.extraModprobeConfig = ''options bluetooth disable_ertm=1'';
 
+  systemd.extraConfig = ''
+    DefaultTimeoutStopSec=10s
+  '';
+
   # Nix settings
   nix = {
     settings = {
