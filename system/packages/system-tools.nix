@@ -19,6 +19,11 @@
     ocamlPackages.gstreamer
     gst_all_1.gst-plugins-good
     gst_all_1.gst-plugins-bad
+    pkgs.xorg.libXxf86vm
+    pkgs.xorg.libX11
+    pkgs.openal
+    pkgs.alsa-lib
+    pkgs.libpulseaudio
 
     # Hardware Support
     linuxKernel.packages.linux_zen.xpadneo
