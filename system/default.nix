@@ -16,6 +16,7 @@
     ./services/audio.nix
     ./services/zram.nix
     ./services/power.nix
+    ./packages/overlays.nix
     ./services/environment.nix
     ./services/network.nix
     ./services/database.nix
