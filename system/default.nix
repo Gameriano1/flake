@@ -8,6 +8,7 @@
     ./packages/virtualization.nix
     ./packages/system-tools.nix
     ./packages/media.nix
+    ./packages/steam-run.nix
     ./packages/gaming.nix
     ./packages/security.nix
     ./services/virtualization.nix
