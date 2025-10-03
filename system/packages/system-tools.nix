@@ -25,6 +25,8 @@
     pkgs.alsa-lib
     pkgs.libpulseaudio
 
+    webkitgtk_4_1
+
     # Hardware Support
     linuxKernel.packages.linux_zen.xpadneo
     bluetuith
