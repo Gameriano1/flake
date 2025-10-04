@@ -7,5 +7,6 @@
     google-chrome
     kdePackages.kdenlive
     obsidian
+    discord
   ];
 }
