@@ -10,6 +10,7 @@
     ./packages/media.nix
     ./packages/gaming.nix
     ./packages/security.nix
+    ./packages/discord.nix
     ./services/virtualization.nix
     # ./services/qemu-bridge.nix
     ./services/nh.nix

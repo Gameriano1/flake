@@ -3,7 +3,6 @@
     ./packages/development.nix
     ./packages/system.nix
     ./packages/media.nix
-    ./packages/discord.nix
     ./packages/gaming.nix
     ./packages/networking.nix
     ./programs/modules/default.nix
