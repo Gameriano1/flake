@@ -6,7 +6,6 @@
     vivaldi
     google-chrome
     kdePackages.kdenlive
-    vesktop
     obsidian
   ];
 }
