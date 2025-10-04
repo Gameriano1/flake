@@ -6,7 +6,7 @@
     vivaldi
     google-chrome
     kdePackages.kdenlive
-    discord-canary
+    vencord
     obsidian
   ];
 }
