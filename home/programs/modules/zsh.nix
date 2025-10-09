@@ -29,7 +29,7 @@
         gc = "git commit";
         gp = "git push";
 
-        shotgun = "steam-run /home/leleodocapa/Documents/Projetos/shotgun_interactive/dist/shotgun";
+        shotgun = "steam-run /home/leleodocapa/Documents/Projetos/shotgun_interactive/dist/shotgun/shotgun";
 
         ".." = "cd ..";
       };
