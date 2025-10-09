@@ -13,5 +13,7 @@
     gtk3-x11
     gsettings-desktop-schemas
     pkg-config
+
+    (callPackage /home/leleodocapa/Documents/Projetos/shotgun_interactive/shotgun.nix { })
   ];
 }
