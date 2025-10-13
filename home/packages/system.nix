@@ -13,5 +13,6 @@
     # Fonts
     nerd-fonts.jetbrains-mono
     nerd-fonts.fira-code
+    btop
   ];
 }
