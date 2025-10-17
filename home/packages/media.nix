@@ -8,5 +8,6 @@
     kdePackages.kdenlive
     obsidian
     discord
+    spotify
   ];
 }
