@@ -36,6 +36,9 @@
 
     initExtra = ''
       eval "$(zoxide init zsh)"
+      
+      # Load custom Agnoster theme (red/black/white)
+      source ${./agnoster-custom.zsh}
     '';
     
     history.size = 10000;
