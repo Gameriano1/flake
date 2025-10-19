@@ -6,7 +6,7 @@
     google-chrome
     kdePackages.kdenlive
     obsidian
-    vencord
+    vesktop
     spotify
   ];
 }
