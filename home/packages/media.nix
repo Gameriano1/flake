@@ -6,7 +6,9 @@
     google-chrome
     kdePackages.kdenlive
     obsidian
-    discord
+    (discord.override {
+          withVencord = true;
+        })
     spotify
   ];
 }
