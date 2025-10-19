@@ -23,6 +23,9 @@
       gc = "git commit";
       gp = "git push";
       
+      # Warp Terminal update
+      warp-update = "bash ~/flake/system/packages/warp-terminal/update.sh";
+      
       # Navigation
       ".." = "cd ..";
     };

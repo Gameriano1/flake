@@ -4,7 +4,6 @@
 set -eu -o pipefail
 
 cd "$(dirname "$0")"
-nixpkgs=../../../../
 
 err() {
     echo "$*" >&2
@@ -53,14 +52,18 @@ get_version() {
     echo "$1" | grep -oP -m 1 '(?<=/v)[\d.\w]+(?=/)'
 }
 
-# Use nix hash file to get the hash
+# nix-prefect-url seems to be uncompressing the archive then taking the hash
+# so just get the hash from fetchurl
 sri_get() {
-    local tmpfile hash
-    tmpfile=$(mktemp)
-    curl -sL "$1" -o "$tmpfile" || err "Failed to download $1"
-    hash=$(nix hash file --type sha256 --base64 "$tmpfile")
-    rm -f "$tmpfile"
-    echo "sha256-$hash"
+    local ouput sri
+    output=$(nix-build  --expr \
+        "with import <nixpkgs> {};
+         fetchurl {
+           url = \"$1\";
+         }" 2>&1 || true)
+    sri=$(echo "$output" | awk '/^\s+got:\s+/{ print $2 }')
+    [[ -z "$sri" ]] && err "$output"
+    echo "$sri"
 }
 
 

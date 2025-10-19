@@ -81,6 +81,9 @@
 
         shotgun = "steam-run /home/leleodocapa/Documents/Projetos/shotgun_interactive/dist/shotgun/shotgun";
 
+        # Warp Terminal update
+        warp-update = "bash ~/flake/system/packages/warp-terminal/update.sh";
+
         ".." = "cd ..";
       };
 
