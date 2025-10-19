@@ -4,8 +4,12 @@
     postman
     mysql84
     git
-    vscode
+    vscodium
+    windsurf
     github-desktop
+
+    httpie
+    zoxide
   ];
 
 }

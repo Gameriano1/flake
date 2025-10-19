@@ -9,6 +9,7 @@
     nil
     nixd
     remmina
+    flameshot
     
     # Fonts
     nerd-fonts.jetbrains-mono
