@@ -11,6 +11,7 @@
 typeset -aHg AGNOSTER_PROMPT_SEGMENTS=(
     prompt_status
     prompt_context
+    prompt_nix_shell
     prompt_virtualenv
     prompt_dir
     prompt_git
@@ -94,6 +95,29 @@ prompt_context() {
       # Local: dark gray background
       prompt_segment $COLOR_BG_DARK $COLOR_GRAY_LIGHT " $user@%m "
     fi
+  fi
+}
+
+# Nix Shell indicator
+# Shows when inside a nix-shell environment
+prompt_nix_shell() {
+  if [[ -n "$IN_NIX_SHELL" ]]; then
+    local shell_type="nix-shell"
+    
+    # Detect the type of nix-shell
+    if [[ "$IN_NIX_SHELL" == "impure" ]]; then
+      shell_type="nix-shell (impure)"
+    elif [[ "$IN_NIX_SHELL" == "pure" ]]; then
+      shell_type="nix-shell (pure)"
+    fi
+    
+    # Check if there's a name attribute
+    if [[ -n "$name" ]]; then
+      shell_type="$shell_type: $name"
+    fi
+    
+    # Use bright red with white text to make it stand out
+    prompt_segment $COLOR_RED_MEDIUM $COLOR_WHITE " ❄ $shell_type "
   fi
 }
 

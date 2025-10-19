@@ -8,6 +8,9 @@
     localVariables = {
       PATH="$PATH:/home/leleodocapa/go/bin:/home/leleodocapa/.local/bin";
       
+      # Use ZSH in nix-shell instead of bash
+      NIX_BUILD_SHELL="zsh";
+      
       # Eza colors - Red theme matching Agnoster
       # Format: file_type=foreground;background
       EZA_COLORS = builtins.concatStringsSep ":" [
@@ -89,6 +92,13 @@
       
       # Load custom Agnoster theme (red/black/white)
       source ${./agnoster-custom.zsh}
+      
+      # Make nix-shell use ZSH properly
+      # This ensures that when entering nix-shell, it uses this .zshrc
+      if [[ -n "$IN_NIX_SHELL" ]]; then
+        # Already in nix-shell, theme is loaded above
+        :
+      fi
     '';
     
     history.size = 10000;
