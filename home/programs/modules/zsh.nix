@@ -1,4 +1,4 @@
-{ config, ... }: {
+{ config, pkgs, ... }: {
   programs.zsh = {
     enable = true;
     enableCompletion = true;
@@ -94,6 +94,19 @@
       
       # Load custom Agnoster theme (red/black/white)
       source ${./agnoster-custom.zsh}
+      
+      # Force nix-shell to use ZSH
+      nix-shell() {
+        command nix-shell "$@" --command zsh
+      }
+      
+      # Also create nix-develop for flakes
+      nix-develop() {
+        nix develop "$@" --command zsh
+      }
+      
+      # Export NIX_BUILD_SHELL for other tools
+      export NIX_BUILD_SHELL="${pkgs.zsh}/bin/zsh"
       
       # Make nix-shell use ZSH properly
       # This ensures that when entering nix-shell, it uses this .zshrc
