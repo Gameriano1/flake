@@ -6,45 +6,7 @@
     # Environment variables
     sessionVariables = {
       # Eza colors - same as ZSH
-      EZA_COLORS = builtins.concatStringsSep ":" [
-        "da=38;5;250"           # Date (light gray)
-        "sn=38;5;250"           # Size numbers (light gray)
-        "sb=38;5;250"           # Size unit (light gray)
-        "uu=38;5;196"           # User (crimson)
-        "un=38;5;196"           # User name (crimson)
-        "gu=38;5;124"           # Group (medium red)
-        "gn=38;5;124"           # Group name (medium red)
-        "ur=38;5;160"           # User read (bright red)
-        "uw=38;5;196"           # User write (crimson)
-        "ux=38;5;124"           # User execute (medium red)
-        "ue=38;5;124"           # User execute file (medium red)
-        "gr=38;5;240"           # Group read (gray)
-        "gw=38;5;240"           # Group write (gray)
-        "gx=38;5;240"           # Group execute (gray)
-        "tr=38;5;235"           # Other read (dark gray)
-        "tw=38;5;235"           # Other write (dark gray)
-        "tx=38;5;235"           # Other execute (dark gray)
-        "di=38;5;160;1"         # Directory (bright red, bold)
-        "ex=38;5;196;1"         # Executable (crimson, bold)
-        "fi=38;5;250"           # Regular file (light gray)
-        "ln=38;5;124"           # Symlink (medium red)
-        "or=38;5;196;48;5;234"  # Broken symlink (crimson on dark bg)
-        "*.md=38;5;15"          # Markdown (white)
-        "*.txt=38;5;250"        # Text files (light gray)
-        "*.nix=38;5;160"        # Nix files (bright red)
-        "*.sh=38;5;124"         # Shell scripts (medium red)
-        "*.py=38;5;196"         # Python (crimson)
-        "*.rs=38;5;160"         # Rust (bright red)
-        "*.go=38;5;124"         # Go (medium red)
-        "*.js=38;5;196"         # JavaScript (crimson)
-        "*.ts=38;5;160"         # TypeScript (bright red)
-        "*.json=38;5;240"       # JSON (gray)
-        "*.yaml=38;5;240"       # YAML (gray)
-        "*.toml=38;5;240"       # TOML (gray)
-        "*.lock=38;5;235"       # Lock files (dark gray)
-        "*.log=38;5;235"        # Log files (dark gray)
-        "*.git=38;5;235"        # Git files (dark gray)
-      ];
+      EZA_COLORS = "da=38;5;250:sn=38;5;250:sb=38;5;250:uu=38;5;196:un=38;5;196:gu=38;5;124:gn=38;5;124:ur=38;5;160:uw=38;5;196:ux=38;5;124:ue=38;5;124:gr=38;5;240:gw=38;5;240:gx=38;5;240:tr=38;5;235:tw=38;5;235:tx=38;5;235:di=38;5;160;1:ex=38;5;196;1:fi=38;5;250:ln=38;5;124:or=38;5;196;48;5;234:*.md=38;5;15:*.txt=38;5;250:*.nix=38;5;160:*.sh=38;5;124:*.py=38;5;196:*.rs=38;5;160:*.go=38;5;124:*.js=38;5;196:*.ts=38;5;160:*.json=38;5;240:*.yaml=38;5;240:*.toml=38;5;240:*.lock=38;5;235:*.log=38;5;235:*.git=38;5;235";
     };
     
     # Shell aliases - same as ZSH
