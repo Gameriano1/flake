@@ -5,11 +5,13 @@
     autosuggestion.enable = true;
     syntaxHighlighting.enable = true;
 
+    sessionVariables = {
+      # Use ZSH in nix-shell instead of bash
+      NIX_BUILD_SHELL = "zsh";
+    };
+
     localVariables = {
       PATH="$PATH:/home/leleodocapa/go/bin:/home/leleodocapa/.local/bin";
-      
-      # Use ZSH in nix-shell instead of bash
-      NIX_BUILD_SHELL="zsh";
       
       # Eza colors - Red theme matching Agnoster
       # Format: file_type=foreground;background
