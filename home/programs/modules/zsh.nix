@@ -34,6 +34,10 @@
         ".." = "cd ..";
       };
 
+    initExtra = ''
+      eval "$(zoxide init zsh)"
+    '';
+    
     history.size = 10000;
     history.path = "${config.xdg.dataHome}/zsh/history";
   };
