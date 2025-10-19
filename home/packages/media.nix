@@ -6,7 +6,7 @@
     google-chrome
     kdePackages.kdenlive
     obsidian
-    discord
+    vencord
     spotify
   ];
 }
