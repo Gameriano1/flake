@@ -84,7 +84,7 @@
         ".." = "cd ..";
       };
 
-    initExtra = ''
+    initContent = ''
       eval "$(zoxide init zsh)"
       
       # Load custom Agnoster theme (red/black/white)
