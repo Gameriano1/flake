@@ -10,6 +10,7 @@
     nixd
     remmina
     flameshot
+    eza  # Modern replacement for ls
     
     # Fonts
     nerd-fonts.jetbrains-mono
