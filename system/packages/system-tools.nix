@@ -24,6 +24,11 @@
     pkgs.openal
     pkgs.alsa-lib
     pkgs.libpulseaudio
+    
+    # Audio control tools
+    alsa-utils  # amixer, alsamixer
+    pulseaudio  # pactl (para PipeWire com compatibilidade PulseAudio)
+    pavucontrol # Interface gráfica de controle de áudio
 
     webkitgtk_4_1
 
