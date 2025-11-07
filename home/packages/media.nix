@@ -8,6 +8,6 @@
     obsidian
     vesktop
     spotify
-    anytype
+    notesnook
   ];
 }
