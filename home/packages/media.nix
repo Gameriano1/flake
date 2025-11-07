@@ -9,5 +9,6 @@
     vesktop
     spotify
     notesnook
+    affine
   ];
 }
