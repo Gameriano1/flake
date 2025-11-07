@@ -5,6 +5,7 @@
     mysql84
     git
     vscodium
+    windsurf
     github-desktop
 
     httpie
