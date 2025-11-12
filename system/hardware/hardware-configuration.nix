@@ -19,14 +19,6 @@
     };
 
    boot.supportedFilesystems = [ "ext4" ];
-     
-   systemd.mounts = [{
-       what = "/dev/disk/by-uuid/35a508c8-26f7-40ed-9a80-f4a6c7fe7b7e";
-       where = "/mnt/disco-d";
-       type = "ext4";
-       options = "rw,nofail";
-       wantedBy = [ "multi-user.target" ];
-     }];
 
   
   swapDevices =
