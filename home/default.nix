@@ -5,6 +5,7 @@
     ./packages/media.nix
     ./packages/gaming.nix
     ./packages/networking.nix
+    ./packages/security.nix
     ./programs/modules/default.nix
   ];
 
