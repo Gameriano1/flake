@@ -15,9 +15,14 @@
       url = "github:danth/stylix";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+
+    antigravity-nix = {
+      url = "github:jacopone/antigravity-nix";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
-  outputs = { self, nixpkgs, nixpkgs-stable, chaotic, home-manager, ... }@inputs: {
+  outputs = { self, nixpkgs, nixpkgs-stable, chaotic, home-manager, antigravity-nix, ... }@inputs: {
     
     nixosConfigurations = {
       nixos = nixpkgs.lib.nixosSystem {
@@ -38,6 +43,9 @@
             home-manager.backupFileExtension = "backup";
             home-manager.users.leleodocapa = import ./home;
             home-manager.extraSpecialArgs = { inherit inputs; homeStateVersion = "25.05"; };
+            environment.systemPackages = [
+              antigravity-nix.packages.x86_64-linux.default
+            ];
           }
         ];
       };
