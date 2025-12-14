@@ -43,7 +43,6 @@
       # DESABILITA COMPLETAMENTE AGC, Echo Cancellation e processamento de voz
       (pkgs.writeTextDir "share/wireplumber/wireplumber.conf.d/50-disable-all-processing.conf" ''
         # Remove todos os módulos de processamento de áudio
-        wireplumber.components = []
         
         # Desabilita todos os filtros e chains
         wireplumber.profiles = {
