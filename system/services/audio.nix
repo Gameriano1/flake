@@ -50,7 +50,6 @@
           main = {
             monitor.libcamera = disabled
             monitor.v4l2 = disabled
-            monitor.bluez = disabled
           }
         }
       '')
