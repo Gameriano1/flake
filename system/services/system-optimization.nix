@@ -5,6 +5,5 @@
       rulesProvider = pkgs.ananicy-rules-cachyos;
     };
     irqbalance.enable = true;
-    preload.enable = true;
   };
 }
