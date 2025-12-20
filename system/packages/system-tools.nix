@@ -44,6 +44,5 @@
     # Performance & System Tweaks
     ananicy
     irqbalance
-    preload
   ];
 }
