@@ -20,9 +20,18 @@
       url = "github:jacopone/antigravity-nix";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+
+    preload-ng = {
+      url = "github:miguel-b-p/preload-ng";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+
+    flox = {
+      url = "github:flox/flox/latest";
+    };
   };
 
-  outputs = { self, nixpkgs, nixpkgs-stable, chaotic, home-manager, antigravity-nix, ... }@inputs: {
+  outputs = { self, nixpkgs, nixpkgs-stable, chaotic, home-manager, antigravity-nix, preload-ng, flox, ... }@inputs: {
     
     nixosConfigurations = {
       nixos = nixpkgs.lib.nixosSystem {
@@ -37,6 +46,11 @@
           ./system
           chaotic.nixosModules.default
           home-manager.nixosModules.home-manager
+
+          preload-ng.nixosModules.default
+          {
+            services.preload-ng.enable = true;
+          }
           {
             home-manager.useGlobalPkgs = true;
             home-manager.useUserPackages = true;
@@ -45,6 +59,7 @@
             home-manager.extraSpecialArgs = { inherit inputs; homeStateVersion = "25.05"; };
             environment.systemPackages = [
               antigravity-nix.packages.x86_64-linux.default
+              flox.packages.x86_64-linux.default
             ];
           }
         ];
