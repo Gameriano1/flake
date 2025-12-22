@@ -1,6 +1,7 @@
-{ pkgs, ... }:
+{ pkgs, inputs, ... }:
 {
   nixpkgs.overlays = [
+    inputs.niri.overlays.default
     (final: prev: {
       steam = prev.steam.override {
         extraPkgs = ps: with ps; [

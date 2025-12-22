@@ -1,83 +1,70 @@
-{ config, pkgs, inputs, ... }:
+{ pkgs, ... }:
 
 {
-  imports = [
-    inputs.niri.homeModules.niri
-  ];
+  programs.niri.enable = true;
 
-  programs.niri = {
-    enable = true;
+  xdg.configFile."niri/config.kdl".text = ''
+    output "eDP-1" {
+      scale 1.0
+    }
 
-    settings = {
-      outputs = {
-        "eDP-1" = {
-          scale = 1.0;
-        };
-      };
+    input {
+      keyboard {
+        xkb {
+          layout "br"
+          options "caps:escape"
+        }
+      }
+      touchpad {
+        tap
+        dwt
+        natural-scroll
+      }
+    }
 
-      input = {
-        keyboard = {
-          xkb = {
-            layout = "br";
-            options = "caps:escape";
-          };
-        };
-        touchpad = {
-          tap = true;
-          dwt = true;
-          natural-scroll = true;
-        };
-      };
+    layout {
+      gaps 16
+      center-focused-column "never"
 
-      layout = {
-        gaps = 16;
-        center-focused-column = "never";
+      preset-column-widths {
+        proportion 0.33333
+        proportion 0.5
+        proportion 0.66667
+      }
 
-        preset-column-widths = [
-          { proportion = 1.0 / 3.0; }
-          { proportion = 1.0 / 2.0; }
-          { proportion = 2.0 / 3.0; }
-        ];
+      default-column-width { proportion 0.5; }
 
-        default-column-width = { proportion = 1.0 / 2.0; };
+      focus-ring {
+        width 4
+        active-color "#7fc8ff"
+        inactive-color "#505050"
+      }
+    }
 
-        focus-ring = {
-          enable = true;
-          width = 4;
-          active.color = "#7fc8ff";
-          inactive.color = "#505050";
-        };
-      };
+    binds {
+      Mod+Shift+Slash { show-hotkey-overlay; }
 
-      spawn-at-startup = [
-        # { command = ["waybar"]; }
-      ];
+      Mod+T { spawn "warp-terminal"; }
+      Mod+D { spawn "fuzzel"; }
+      Mod+Return { spawn "warp-terminal"; }
+      Mod+W { close-window; }
 
-      binds = with config.lib.niri.actions; {
-        "Mod+Shift+Slash".action = show-hotkey-overlay;
+      Mod+Left { focus-column-left; }
+      Mod+Right { focus-column-right; }
+      Mod+Down { focus-window-down; }
+      Mod+Up { focus-window-up; }
 
-        "Mod+T".action = spawn "warp-terminal";
-        "Mod+D".action = spawn "fuzzel";
-        "Mod+Return".action = spawn "warp-terminal";
-        "Mod+W".action = close-window;
+      Mod+Ctrl+Left { move-column-left; }
+      Mod+Ctrl+Right { move-column-right; }
 
-        "Mod+Left".action = focus-column-left;
-        "Mod+Right".action = focus-column-right;
-        "Mod+Down".action = focus-window-down;
-        "Mod+Up".action = focus-window-up;
+      Mod+Home { focus-column-first; }
+      Mod+End { focus-column-last; }
 
-        "Mod+Ctrl+Left".action = move-column-left;
-        "Mod+Ctrl+Right".action = move-column-right;
+      Mod+Q { quit; }
 
-        "Mod+Home".action = focus-column-first;
-        "Mod+End".action = focus-column-last;
-
-        "Mod+Q".action = quit;
-
-        "Print".action = screenshot;
-        "Ctrl+Print".action = screenshot-screen;
-        "Alt+Print".action = screenshot-window;
-      };
-    };
-  };
+      Print { screenshot; }
+      Ctrl+Print { screenshot-screen; }
+      Alt+Print { screenshot-window; }
+    }
+  '';
 }

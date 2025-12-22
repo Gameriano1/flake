@@ -50,7 +50,6 @@
           home-manager.nixosModules.home-manager
 
           preload-ng.nixosModules.default
-          niri.nixosModules.niri
           {
             services.preload-ng.enable = true;
           }
