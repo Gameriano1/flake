@@ -29,9 +29,11 @@
     flox = {
       url = "github:flox/flox/latest";
     };
+
+    niri.url = "github:YaLTeR/niri";
   };
 
-  outputs = { self, nixpkgs, nixpkgs-stable, chaotic, home-manager, antigravity-nix, preload-ng, flox, ... }@inputs: {
+  outputs = { self, nixpkgs, nixpkgs-stable, chaotic, home-manager, antigravity-nix, preload-ng, flox, niri, ... }@inputs: {
     
     nixosConfigurations = {
       nixos = nixpkgs.lib.nixosSystem {
@@ -48,6 +50,7 @@
           home-manager.nixosModules.home-manager
 
           preload-ng.nixosModules.default
+          niri.nixosModules.niri
           {
             services.preload-ng.enable = true;
           }

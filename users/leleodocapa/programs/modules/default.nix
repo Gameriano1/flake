@@ -5,5 +5,6 @@
     ./starship.nix
     ./stylix.nix
     ./zsh.nix
+    ./niri.nix
   ];
 }
