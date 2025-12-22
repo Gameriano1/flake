@@ -1,8 +1,6 @@
 { pkgs, ... }:
 
 {
-  programs.niri.enable = true;
-
   xdg.configFile."niri/config.kdl".text = ''
     output "eDP-1" {
       scale 1.0
