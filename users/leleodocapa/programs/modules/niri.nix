@@ -1,8 +1,11 @@
 { pkgs, ... }:
 
 {
+  home.packages = [ pkgs.fuzzel ];
+
   xdg.configFile."niri/config.kdl".text = ''
     output "eDP-1" {
+      mode "1920x1080@180"
       scale 1.0
     }
 
