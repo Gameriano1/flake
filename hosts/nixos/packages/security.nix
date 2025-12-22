@@ -4,7 +4,7 @@
     cloudflare-warp
     
     # Custom security packages
-    (pkgs.callPackage ../../lib/custom-packages/burp/package.nix {})
+    (pkgs.callPackage ../../../lib/custom-packages/burp/package.nix {})
   ];
 
 }

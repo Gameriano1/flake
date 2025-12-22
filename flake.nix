@@ -43,7 +43,7 @@
           stateVersion = "25.05";
         };
         modules = [
-          ./system
+          ./hosts/nixos
           chaotic.nixosModules.default
           home-manager.nixosModules.home-manager
 
@@ -55,7 +55,7 @@
             home-manager.useGlobalPkgs = true;
             home-manager.useUserPackages = true;
             home-manager.backupFileExtension = "backup";
-            home-manager.users.leleodocapa = import ./home;
+            home-manager.users.leleodocapa = import ./users/leleodocapa;
             home-manager.extraSpecialArgs = { inherit inputs; homeStateVersion = "25.05"; };
             environment.systemPackages = [
               antigravity-nix.packages.x86_64-linux.default
@@ -74,12 +74,11 @@
           user = "leleodocapa";
           homeStateVersion = "25.05";
         };
-        modules = [ ./home ];
+        modules = [ ./users/leleodocapa ];
       };
     };
 
-    # Development Templates
-    templates = import ./dev-shells/default.nix;
+
 
     nix.settings.trusted-users = [ "root" "leleodocapa" ];
 
@@ -94,17 +93,11 @@
             nil  
             nixpkgs-fmt
             nixos-rebuild
-            home-manager
+            pkgs.home-manager
           ];
           shellHook = ''
             echo "🔧 NixOS Configuration Development Environment"
-            echo "Available templates:"
-            echo "  nix flake init -t .#python    # Python development"
-            echo "  nix flake init -t .#node      # Node.js development"  
-            echo "  nix flake init -t .#rust      # Rust development"
-            echo "  nix flake init -t .#go        # Go development"
-            echo "  nix flake init -t .#java      # Java development"
-            echo "  And many more..."
+
           '';
         };
       };
