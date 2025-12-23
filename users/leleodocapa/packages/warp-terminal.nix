@@ -5,8 +5,5 @@
     })
   ];
 
-  # Allow unfree package (Warp is proprietary)
-  nixpkgs.config.allowUnfreePredicate = pkg: builtins.elem (pkgs.lib.getName pkg) [
-    "warp-terminal"
-  ];
+
 }
