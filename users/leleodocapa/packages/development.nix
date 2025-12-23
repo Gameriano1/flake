@@ -4,9 +4,7 @@
     appimage-run
     git
     jdk8  # Java 21 LTS
-    
-    # Java Development Tools
-    devenv
+
     appimage-run
     gdb
     gobject-introspection

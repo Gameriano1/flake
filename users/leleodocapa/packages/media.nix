@@ -7,7 +7,6 @@
     kdePackages.kdenlive
     vesktop
     spotify
-    affine
     wike
   ];
 }
