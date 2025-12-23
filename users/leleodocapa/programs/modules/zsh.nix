@@ -54,8 +54,9 @@
       let
         flakeDir = "~/flake";
       in {
-        sw = "nh os switch";
-        upd = "nh os switch --update";
+        sw = "nh os switch ${flakeDir}";
+        swh = "nh home switch ${flakeDir}";
+        upd = "nh os switch --update ${flakeDir}";
         bf = "bash /home/leleodocapa/Documents/bf.sh";
         bfb = "bash /home/leleodocapa/Documents/bfb.sh";
 
