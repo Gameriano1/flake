@@ -13,5 +13,6 @@
     gtk3-x11
     gsettings-desktop-schemas
     pkg-config
+    nodejs
   ];
 }
