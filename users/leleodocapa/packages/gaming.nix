@@ -5,5 +5,9 @@
     wine
     winetricks
     motrix
+    
+    # Migrated from host
+    bottles
+    protontricks
   ];
 }

@@ -8,5 +8,7 @@
     vesktop
     spotify
     wike
+    
+    audacity # Migrated from host
   ];
 }

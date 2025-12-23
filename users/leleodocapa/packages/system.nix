@@ -16,5 +16,22 @@
     nerd-fonts.jetbrains-mono
     nerd-fonts.fira-code
     btop
+    
+    # Migrated from host
+    gnome-tweaks
+    zenity
+    zip
+    p7zip
+    jq
+    bibata-cursors
+    
+    xfce.thunar
+    xfce.thunar-archive-plugin
+    xfce.thunar-media-tags-plugin
+    
+    evtest
+    jstest-gtk
+    bluetuith
+    blueberry
   ];
 }

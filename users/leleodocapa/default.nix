@@ -6,6 +6,7 @@
     ./packages/gaming.nix
     ./packages/networking.nix
     ./packages/security.nix
+    ./packages/warp-terminal.nix
     ./programs/modules/default.nix
   ];
 

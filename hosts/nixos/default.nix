@@ -7,10 +7,10 @@
     ./packages/development.nix
     ./packages/virtualization.nix
     ./packages/system-tools.nix
-    ./packages/media.nix
-    ./packages/gaming.nix
+    ./packages/development.nix
+    ./packages/virtualization.nix
+    ./packages/system-tools.nix
     ./packages/security.nix
-    ./packages/warp-terminal.nix
     ./services/virtualization.nix
     # ./services/qemu-bridge.nix
     ./services/nh.nix

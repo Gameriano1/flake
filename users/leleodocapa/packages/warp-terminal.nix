@@ -1,8 +1,7 @@
 { pkgs, ... }: {
-  # Warp Terminal - Modern Rust-based terminal with AI features
-  environment.systemPackages = [
+  home.packages = [
     (pkgs.callPackage ./warp-terminal/package.nix {
-      waylandSupport = true;  # Enable Wayland support
+      waylandSupport = true;
     })
   ];
 

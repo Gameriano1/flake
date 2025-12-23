@@ -2,19 +2,9 @@
   environment.systemPackages = with pkgs; [
     # System Tools
     bash
-    gnome-tweaks
-    wmctrl
-    zenity
-    zip
-    p7zip
     killall
     lm_sensors
-    jq
-    bibata-cursors
-    xfce.thunar
-    xfce.thunar-archive-plugin
-    xfce.thunar-media-tags-plugin
-
+    
     ffmpeg-full
     ocamlPackages.gstreamer
     gst_all_1.gst-plugins-good
@@ -29,17 +19,14 @@
     alsa-utils  # amixer, alsamixer
     pulseaudio  # pactl (para PipeWire com compatibilidade PulseAudio)
     pavucontrol # Interface gráfica de controle de áudio
-
+    
     webkitgtk_4_1
-
+    
     # Hardware Support
     linuxKernel.packages.linux_zen.xpadneo
-    bluetuith
-    blueberry
-    jstest-gtk
-    evtest
     corectrl
-    protontricks
+    
+    # Performance & System Tweaks
 
     # Performance & System Tweaks
     ananicy
