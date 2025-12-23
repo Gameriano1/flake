@@ -21,7 +21,7 @@
     gnome-tweaks
     zenity
     zip
-    p7zip
+    
     jq
     bibata-cursors
     
